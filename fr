@@ -1,0 +1,81 @@
+</div>
+    </div>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('certificate');
+            const options = {
+                margin: 0,
+                filename: 'Certificate_Angelina_Nikolaevna.pdf',
+                image: { type: 'jpeg', quality: 1.0 },
+                html2canvas: { scale: 3, useCORS: true, letterRendering: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(options).from(element).save();
+        }
+    </script>
+</body>
+</html>
+22:10
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Beauty Awards 2026</title>
+    <script src="https://cloudflare.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+        .container { text-align: center; max-width: 100%; }
+        .download-btn { background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%); color: white; border: none; padding: 16px 36px; font-size: 18px; font-weight: bold; border-radius: 50px; cursor: pointer; box-shadow: 0 10px 20px rgba(170, 130, 10, 0.3); transition: all 0.3s ease; margin-bottom: 30px; }
+        .download-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(170, 130, 10, 0.4); }
+        .certificate-wrapper { background-color: #fff8dc; width: 210mm; height: 297mm; padding: 10mm; box-sizing: border-box; box-shadow: 0 20px 50px rgba(0,0,0,0.15); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+        .border-line { border: 5px solid #d4af37; width: 100%; height: 100%; box-sizing: border-box; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+        .header { font-size: 32px; color: #b48200; font-weight: bold; margin: 0; }
+        .subtitle { font-size: 26px; color: #555; margin-top: 10px; letter-spacing: 1px; text-transform: uppercase; }
+        .name { font-size: 34px; color: #111; font-weight: bold; line-height: 1.3; margin: 20px 0; border-bottom: 2px solid #e2d1a6; padding-bottom: 10px; width: 80%; text-align: center; }
+        .main-text { font-size: 20px; color: #333; line-height: 1.8; text-align: center; max-width: 90%; margin: 0 auto; }
+        .highlight { font-size: 24px; font-weight: bold; color: #b48200; display: block; margin: 15px 0; }
+        .stamp { font-size: 55px; margin: 10px 0; }
+        .footer-info { display: flex; justify-content: space-between; width: 90%; font-size: 16px; color: #444; margin-top: 20px; border-top: 1px dashed #d4af37; padding-top: 15px; }
+        @media (max-width: 220mm) { .certificate-wrapper { transform: scale(0.45); transform-origin: top center; margin-bottom: -160mm; } }
+        @media (max-width: 450px) { .certificate-wrapper { transform: scale(0.38); margin-bottom: -185mm; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="download-btn" onclick="downloadPDF()">Скачать PDF-сертификат</button>
+        <div class="certificate-wrapper" id="certificate">
+            <div class="border-line">
+                <div class="header">👑  Golden Beauty Awards 2026</div>
+                <div class="subtitle">Памятный сертификат</div>
+                <div class="name">Паниматченко<br>Ангелина Николаевна</div>
+                <div class="main-text">
+                    Подтверждается, что удостоивается звания 
+                    <span class="highlight">«Самая красивая девушка в мире»</span>
+                    в знак восхищения красотой, индивидуальностью и неповторимым обаянием.
+                </div>
+                <div class="stamp">🏆</div>
+                <div class="footer-info">
+                    <div><strong>Дата:</strong> 11.07.2026</div>
+                    <div><strong>Организатор конкурса</strong> ___________</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('certificate');
+            const options = {
+                margin: 0,
+                filename: 'Certificate_Angelina_Nikolaevna.pdf',
+                image: { type: 'jpeg', quality: 1.0 },
+html2canvas: { scale: 3, useCORS: true, letterRendering: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(options).from(element).save();
+        }
+    </script>
+</body>
+</html>
+
+
