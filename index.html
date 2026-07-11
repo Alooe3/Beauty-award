@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Beauty Awards 2026</title>
+    <title>Golden Beauty Awards 2026 | Официальные результаты</title>
     
     <style>
         body {
@@ -142,9 +142,11 @@
             border-radius: 50%;
         }
 
-        /* Скрытый блок сертификата для PDF */
-#hidden-pdf {
-            display: none;
+        /* Футер */
+footer {
+            margin-top: 40px;
+            color: #606575;
+            font-size: 13px;
         }
 
         /* СВЕРХВАЖНО: Специальные стили для печати в PDF */
@@ -155,10 +157,10 @@
                 padding: 0 !important;
                 margin: 0 !important;
             }
-            header, .container, #hidden-pdf {
+            header, .container, #print-area {
                 display: none !important;
             }
-            #print-area {
+            #real-pdf-layout {
                 display: block !important;
                 width: 210mm;
                 height: 297mm;
@@ -183,7 +185,7 @@
         }
         
         /* В обычном режиме скрываем печатную область */
-        #print-area {
+        #real-pdf-layout {
             display: none;
         }
     </style>
@@ -191,18 +193,18 @@
 <body>
 
     <header>
-        <div class="logo">👑  Golden Beauty Awards 2026</div>
+        <div class="logo">👑 Golden Beauty Awards 2026</div>
     </header>
 
     <div class="container">
         <div class="winner-card">
-            <div style="font-size: 50px;">👸 </div>
+            <div style="font-size: 50px; animation: bounce 2s infinite;">👸</div>
             <div class="winner-name">Паниматченко Ангелина Николаевна</div>
             <div class="winner-score">🏆 1-е место (Гран-при) — 150 баллов</div>
             <p style="color: #a0a5b5; line-height: 1.6; margin-bottom: 30px;">
                 Решением судейской коллегии удостаивается высшей награды и официального титула <strong>«Самая красивая девушка в мире»</strong> за непревзойденную эстетику, артистизм и абсолютное очарование.
             </p>
-            <button class="btn" onclick="window.print()">Скачать золотой сертификат</button>
+            <button class="btn" onclick="window.print()">📥 Скачать PDF-сертификат</button>
         </div>
 
         <div class="section-title">Судейская коллегия</div>
@@ -210,21 +212,21 @@
             <div class="judge-card">
                 <h3>Александр Версаль</h3>
                 <p style="color:#808595; font-size:14px;">Председатель жюри</p>
-                <div class="judge-status">50/50 баллов</div>
+                <div class="judge-status">50 / 50 баллов</div>
             </div>
             <div class="judge-card">
                 <h3>Елена Миланская</h3>
                 <p style="color:#808595; font-size:14px;">Топ-модель</p>
-                <div class="judge-status">50/50 баллов</div>
+                <div class="judge-status">50 / 50 баллов</div>
             </div>
             <div class="judge-card">
                 <h3>Кристиан Диор</h3>
                 <p style="color:#808595; font-size:14px;">Фотограф Vogue</p>
-                <div class="judge-status">50/50 баллов</div>
+                <div class="judge-status">50 / 50 баллов</div>
             </div>
         </div>
 
-        <div class="section-title">Таблица результатов</div>
+        <div class="section-title">Таблица результатов конкурса</div>
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -238,16 +240,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="background: rgba(212, 175, 55, 0.1);">
+                    <tr style="background: rgba(212, 175, 55, 0.15);">
                         <td><span class="place" style="background:#d4af37;">1</span></td>
                         <td><strong>Паниматченко Ангелина Н.</strong></td>
                         <td>50</td>
                         <td>50</td>
                         <td>50</td>
-                        <td><strong>150</strong></td>
-                    </tr>
+                        <td><strong>150</strong> (Максимум)</td>
+</tr>
                     <tr>
-<td><span class="place" style="background:#c0c0c0;">2</span></td>
+                        <td><span class="place" style="background:#c0c0c0;">2</span></td>
                         <td>Ковалева Дарья С.</td>
                         <td>46</td>
                         <td>45</td>
@@ -265,21 +267,25 @@
                 </tbody>
             </table>
         </div>
+
+        <footer>
+            <p>© 2026 Golden Beauty Awards. Итоги конкурса зафиксированы 11.07.2026.</p>
+            <p style="font-size: 11px; color: #404555;">Система генерации документов: Активна</p>
+        </footer>
     </div>
 
-    <!-- Чистая область А4, которая активируется ТОЛЬКО при нажатии на кнопку -->
-    <div id="print-area">
+    <!-- Область А4, которая активируется ТОЛЬКО при печати через кнопку -->
+    <div id="real-pdf-layout">
         <div class="cert-border">
-            <div style="font-size: 34px; color: #b48200; font-weight: bold; margin: 0; padding-top: 20px;">👑  Golden Beauty Awards 2026</div>
+            <div style="font-size: 34px; color: #b48200; font-weight: bold; margin: 0; padding-top: 20px;">👑 Golden Beauty Awards 2026</div>
             <div style="font-size: 24px; color: #555; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-top: 15px;">Памятный сертификат</div>
             <div style="font-size: 36px; color: #000; font-weight: bold; line-height: 1.4; margin: 40px 0; border-bottom: 2px solid #e2d1a6; padding-bottom: 15px; width: 85%;">Паниматченко<br>Ангелина Николаевна</div>
             <div style="font-size: 21px; color: #222; line-height: 1.9; max-width: 90%;">
                 Подтверждается, что удостоивается звания 
                 <span style="font-size: 26px; font-weight: bold; color: #b48200; display: block; margin: 25px 0;">«Самая красивая девушка в мире»</span>
-                в знак восхищения красотой, индивидуальностью и неповторимым обаянием.
-            </div>
-            <div style="font-size: 60px; margin: 20px 0;">🏆</div>
 
 
-        
-  
+
+
+         
+    
