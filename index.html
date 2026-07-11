@@ -3,309 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Beauty Awards 2026 | Официальный сайт</title>
-    <!-- Подключение библиотек для экспорта в PDF и иконок -->
+    <title>Golden Beauty Awards 2026</title>
+    <!-- Подключаем только самую важную библиотеку для PDF -->
     <script src="https://cloudflare.com"></script>
-    <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
-        :root {
-            --gold-primary: #d4af37;
-            --gold-light: #f3e5ab;
-            --gold-dark: #aa820a;
-            --bg-dark: #0a0b0d;
-            --card-bg: #14161d;
-            --text-main: #f5f5f7;
-        }
-
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(at 10% 20%, rgba(212, 175, 55, 0.08) 0px, transparent 40%),
-                radial-gradient(at 90% 80%, rgba(170, 130, 10, 0.08) 0px, transparent 40%);
-            color: var(--text-main);
+            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            background-image: radial-gradient(circle at 50% 50%, #1a1c23 0%, #0b0c10 100%);
+            color: #f5f5f7;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
+            padding-top: 100px;
         }
 
-        /* Навигационная панель */
+        /* Шапка сайта */
         header {
-            background: rgba(20, 22, 29, 0.85);
-            backdrop-filter: blur(10px);
+            background: #14161d;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            box-sizing: border-box;
+            border-bottom: 1px solid #d4af37;
+            text-align: center;
+            padding: 15px 0;
         }
         .logo {
             font-size: 22px;
-            font-weight: 800;
-            color: var(--gold-primary);
+            font-weight: bold;
+            color: #d4af37;
             text-transform: uppercase;
             letter-spacing: 1px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 25px;
-        }
-        .nav-menu a {
-            color: #a0a5b5;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-        .nav-menu a:hover {
-            color: var(--gold-primary);
         }
 
-        /* Главная секция сайта */
-        .hero {
-            padding: 140px 20px 60px;
-            text-align: center;
+        /* Главный блок финалиста */
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            animation: fadeIn 1.2s ease-out;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin: 0;
-            background: linear-gradient(135deg, #fff 30%, var(--gold-primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #a0a5b5;
-            margin: 15px 0 30px;
-        }
-
-        /* Общие контейнеры секций */
-        .section-container {
-            max-width: 1100px;
-            margin: 0 auto 80px;
-            padding: 0 20px;
-        }
-        .section-title {
-            font-size: 28px;
-            color: var(--gold-primary);
+            padding: 20px;
             text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
         }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 2px;
-            background: var(--gold-primary);
-            margin: 10px auto 0;
-        }
-
-        /* Блок Абсолютного Финалиста */
         .winner-card {
-            background: linear-gradient(145deg, #181a24 0%, #101117 100%);
-            border: 2px solid var(--gold-primary);
+            background: #14161d;
+            border: 2px solid #d4af37;
             border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-position: relative;
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
-            transform: translateY(0);
-            transition: 0.4s ease;
-            max-width: 600px;
-            margin: 0 auto 50px;
-        }
-        .winner-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
-        }
-        .winner-badge {
-            background: var(--gold-primary);
-            color: #111;
-            font-weight: 800;
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-size: 14px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .winner-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(var(--gold-primary), var(--gold-dark));
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            color: #111;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+            padding: 40px 20px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            margin-bottom: 50px;
         }
         .winner-name {
             font-size: 32px;
             font-weight: bold;
-            margin: 0 0 10px;
             color: #fff;
+            margin: 15px 0;
         }
         .winner-score {
-            color: var(--gold-primary);
+            color: #d4af37;
             font-size: 20px;
-            font-weight: 700;
+            font-weight: bold;
             margin-bottom: 25px;
         }
 
-        /* Кнопки действий */
+        /* Кнопка скачивания */
         .btn {
-            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
-            background-size: 200% auto;
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa820a 100%);
             color: #111;
             border: none;
             padding: 15px 35px;
             font-size: 16px;
-            font-weight: 700;
+            font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
-            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
             text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background-position: right center;
-            transform: scale(1.03);
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
-        }
-
-        /* Сетке судей */
-        .judges-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .judge-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
             transition: 0.3s;
         }
-        .judge-card:hover {
-            border-color: rgba(212, 175, 55, 0.4);
-            transform: translateY(-4px);
-        }
-        .judge-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold-primary);
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-        }
-        .judge-card h3 {
-            margin: 0 0 5px;
-            font-size: 19px;
-        }
-        .judge-card p {
-            color: #808595;
-            font-size: 14px;
-            margin: 0 0 15px;
-        }
-        .judge-status {
-            background: rgba(255,255,255,0.05);
-            padding: 8px;
-            border-radius: 8px;
-            font-size: 13px;
-            color: var(--gold-light);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .judge-status:hover {
-            background: rgba(212, 175, 55, 0.15);
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(212, 175, 55, 0.5);
         }
 
-        /* Таблица результатов конкурса */
+        /* Судьи */
+        .section-title {
+            font-size: 26px;
+            color: #d4af37;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+        }
+        .judges-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .judge-card {
+            background: #14161d;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 220px;
+        }
+        .judge-status {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 6px;
+            border-radius: 5px;
+            font-size: 13px;
+            color: #f3e5ab;
+            margin-top: 10px;
+        }
+
+        /* Таблица результатов */
         .table-wrapper {
-            background: var(--card-bg);
+            background: #14161d;
             border-radius: 15px;
             overflow-x: auto;
-border: 1px solid rgba(255,255,255,0.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 50px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            min-width: 600px;
         }
         th {
-            background-color: rgba(212, 175, 55, 0.05);
-            color: var(--gold-primary);
-            padding: 16px 20px;
-            font-weight: 600;
-            font-size: 15px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            background-color: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            padding: 15px;
         }
         td {
-            padding: 16px 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-            font-size: 15px;
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        tr:hover td {
-            background: rgba(255,255,255,0.02);
-        }
-        .place-badge {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .place {
+            background: #d4af37;
+            color: #111;
             font-weight: bold;
-            font-size: 13px;
+padding: 4px 10px;
+            border-radius: 50%;
         }
-        .place-1 { background: var(--gold-primary); color: #111; box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
-        .place-2 { background: #c0c0c0; color: #111; }
-        .place-3 { background: #cd7f32; color: #111; }
-        .place-other { background: rgba(255,255,255,0.1); color: #ccc; }
 
-        /* Всплывающий скрытый контейнер А4 для экспорта в PDF */
-        #hidden-certificate-container {
+        /* Скрытый блок сертификата для PDF */
+        #hidden-pdf {
             position: absolute;
             left: -9999px;
             top: -9999px;
         }
-        .certificate-wrapper {
+        .cert-box {
             background-color: #fff8dc;
             width: 210mm;
             height: 297mm;
@@ -316,4 +161,402 @@ border: 1px solid rgba(255,255,255,0.05);
             align-items: center;
             justify-content: space-between;
         }
-        .border-line {
+        .cert-border {
+            border: 4px solid #d4af37;
+            outline: 2px solid #b48200;
+            outline-offset: -10px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">👑 Golden Beauty Awards 2026</div>
+    </header>
+
+    <div class="container">
+        <div class="winner-card">
+            <div style="font-size: 50px;">👸</div>
+            <div class="winner-name">Паниматченко Ангелина Николаевна</div>
+            <div class="winner-score">🏆 1-е место (Гран-при) — 150 баллов</div>
+            <p style="color: #a0a5b5; line-height: 1.6; margin-bottom: 30px;">
+                Решением судейской коллегии удостаивается высшей награды и официального титула <strong>«Самая красивая девушка в мире»</strong> за непревзойденную эстетику, артистизм и абсолютное очарование.
+            </p>
+            <button class="btn" onclick="downloadPDF()">Скачать золотой сертификат</button>
+        </div>
+
+        <div class="section-title">Судейская коллегия</div>
+        <div class="judges-grid">
+            <div class="judge-card">
+                <h3>Александр Версаль</h3>
+                <p style="color:#808595; font-size:14px;">Председатель жюри</p>
+                <div class="judge-status">50/50 баллов</div>
+            </div>
+            <div class="judge-card">
+                <h3>Елена Миланская</h3>
+                <p style="color:#808595; font-size:14px;">Топ-модель</p>
+                <div class="judge-status">50/50 баллов</div>
+            </div>
+            <div class="judge-card">
+                <h3>Кристиан Диор</h3>
+                <p style="color:#808595; font-size:14px;">Фотограф Vogue</p>
+                <div class="judge-status">50/50 баллов</div>
+            </div>
+        </div>
+
+        <div class="section-title">Таблица результатов</div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Участница</th>
+                        <th>Красота</th>
+                        <th>Грация</th>
+                        <th>Харизма</th>
+                        <th>Баллы</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(212, 175, 55, 0.1);">
+                        <td><span class="place" style="background:#d4af37;">1</span></td>
+                        <td><strong>Паниматченко Ангелина Н.</strong></td>
+                        <td>50</td>
+                        <td>50</td>
+                        <td>50</td>
+                        <td><strong>150</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="place" style="background:#c0c0c0;">2</span></td>
+                        <td>Ковалева Дарья С.</td>
+                        <td>46</td>
+                        <td>45</td>
+                        <td>48</td>
+                        <td>139</td>
+                    </tr>
+                    <tr>
+                        <td><span class="place" style="background:#cd7f32;">3</span></td>
+                        <td>Смирнова Виктория И.</td>
+<td>44</td>
+                        <td>46</td>
+                        <td>44</td>
+                        <td>134</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Скрытый блок А4 для генерации PDF -->
+    <div id="hidden-pdf">
+        <div class="cert-box" id="certificate-target">
+            <div class="cert-border">
+                <div style="font-size: 34px; color: #b48200; font-weight: bold; text-align: center;">👑 Golden Beauty Awards 2026</div>
+                <div style="font-size: 24px; color: #555; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-top: 15px;">Памятный сертификат</div>
+                <div style="font-size: 36px; color: #000; font-weight: bold; line-height: 1.4; margin: 30px 0; border-bottom: 2px solid #e2d1a6; padding-bottom: 15px; width: 85%; text-align: center;">Паниматченко<br>Ангелина Николаевна</div>
+                <div style="font-size: 21px; color: #222; line-height: 1.9; text-align: center; max-width: 90%; margin: 0 auto;">
+                    Подтверждается, что удостоивается звания 
+                    <span style="font-size: 26px; font-weight: bold; color: #b48200; display: block; margin: 20px 0;">«Самая красивая девушка в мире»</span>
+                    в знак восхищения красотой, индивидуальностью и неповторимым обаянием.
+                </div>
+                <div style="font-size: 60px; margin: 15px 0;">🏆</div>
+                <div style="display: flex; justify-content: space-between; width: 90%; font-size: 16px; color: #444; margin-top: 30px; border-top: 1px dashed #d4af37; padding-top: 20px;">
+                    <div><strong>Дата:</strong> 11.07.2026</div>
+                    <div><strong>Организатор конкурса</strong> ___________</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Beauty Awards 2026</title>
+    <!-- Подключаем только самую важную библиотеку для PDF -->
+    <script src="https://cloudflare.com"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            background-image: radial-gradient(circle at 50% 50%, #1a1c23 0%, #0b0c10 100%);
+            color: #f5f5f7;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* Шапка сайта */
+        header {
+            background: #14161d;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid #d4af37;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Главный блок финалиста */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .winner-card {
+            background: #14161d;
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            margin-bottom: 50px;
+        }
+        .winner-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            margin: 15px 0;
+        }
+        .winner-score {
+            color: #d4af37;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* Кнопка скачивания */
+        .btn {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa820a 100%);
+            color: #111;
+            border: none;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Судьи */
+        .section-title {
+            font-size: 26px;
+            color: #d4af37;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+        }
+        .judges-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .judge-card {
+            background: #14161d;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 220px;
+        }
+        .judge-status {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 6px;
+            border-radius: 5px;
+            font-size: 13px;
+            color: #f3e5ab;
+            margin-top: 10px;
+        }
+
+        /* Таблица результатов */
+        .table-wrapper {
+            background: #14161d;
+            border-radius: 15px;
+            overflow-x: auto;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 50px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            padding: 15px;
+        }
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .place {
+            background: #d4af37;
+            color: #111;
+            font-weight: bold;
+padding: 4px 10px;
+            border-radius: 50%;
+        }
+
+        /* Скрытый блок сертификата для PDF */
+        #hidden-pdf {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+        }
+        .cert-box {
+            background-color: #fff8dc;
+            width: 210mm;
+            height: 297mm;
+            padding: 12mm;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cert-border {
+            border: 4px solid #d4af37;
+            outline: 2px solid #b48200;
+            outline-offset: -10px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">👑 Golden Beauty Awards 2026</div>
+    </header>
+
+    <div class="container">
+        <div class="winner-card">
+            <div style="font-size: 50px;">👸</div>
+            <div class="winner-name">Паниматченко Ангелина Николаевна</div>
+            <div class="winner-score">🏆 1-е место (Гран-при) — 150 баллов</div>
+            <p style="color: #a0a5b5; line-height: 1.6; margin-bottom: 30px;">
+                Решением судейской коллегии удостаивается высшей награды и официального титула <strong>«Самая красивая девушка в мире»</strong> за непревзойденную эстетику, артистизм и абсолютное очарование.
+            </p>
+            <button class="btn" onclick="downloadPDF()">Скачать золотой сертификат</button>
+        </div>
+
+        <div class="section-title">Судейская коллегия</div>
+        <div class="judges-grid">
+            <div class="judge-card">
+                <h3>Александр Версаль</h3>
+                <p style="color:#808595; font-size:14px;">Председатель жюри</p>
+                <div class="judge-status">50/50 баллов</div>
+            </div>
+            <div class="judge-card">
+                <h3>Елена Миланская</h3>
+                <p style="color:#808595; font-size:14px;">Топ-модель</p>
+                <div class="judge-status">50/50 баллов</div>
+            </div>
+            <div class="judge-card">
+                <h3>Кристиан Диор</h3>
+                <p style="color:#808595; font-size:14px;">Фотограф Vogue</p>
+                <div class="judge-status">50/50 баллов</div>
+            </div>
+        </div>
+
+        <div class="section-title">Таблица результатов</div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Участница</th>
+                        <th>Красота</th>
+                        <th>Грация</th>
+                        <th>Харизма</th>
+                        <th>Баллы</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(212, 175, 55, 0.1);">
+                        <td><span class="place" style="background:#d4af37;">1</span></td>
+                        <td><strong>Паниматченко Ангелина Н.</strong></td>
+                        <td>50</td>
+                        <td>50</td>
+                        <td>50</td>
+                        <td><strong>150</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="place" style="background:#c0c0c0;">2</span></td>
+                        <td>Ковалева Дарья С.</td>
+                        <td>46</td>
+                        <td>45</td>
+                        <td>48</td>
+                        <td>139</td>
+                    </tr>
+                    <tr>
+                        <td><span class="place" style="background:#cd7f32;">3</span></td>
+                        <td>Смирнова Виктория И.</td>
+<td>44</td>
+                        <td>46</td>
+                        <td>44</td>
+                        <td>134</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Скрытый блок А4 для генерации PDF -->
+    <div id="hidden-pdf">
+        <div class="cert-box" id="certificate-target">
+            <div class="cert-border">
+                <div style="font-size: 34px; color: #b48200; font-weight: bold; text-align: center;">👑 Golden Beauty Awards 2026</div>
+                <div style="font-size: 24px; color: #555; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-top: 15px;">Памятный сертификат</div>
+                <div style="font-size: 36px; color: #000; font-weight: bold; line-height: 1.4; margin: 30px 0; border-bottom: 2px solid #e2d1a6; padding-bottom: 15px; width: 85%; text-align: center;">Паниматченко<br>Ангелина Николаевна</div>
+                <div style="font-size: 21px; color: #222; line-height: 1.9; text-align: center; max-width: 90%; margin: 0 auto;">
+                    Подтверждается, что удостоивается звания 
+                    <span style="font-size: 26px; font-weight: bold; color: #b48200; display: block; margin: 20px 0;">«Самая красивая девушка в мире»</span>
+                    в знак восхищения красотой, индивидуальностью и неповторимым обаянием.
+                </div>
+                <div style="font-size: 60px; margin: 15px 0;">🏆</div>
+                <div style="display: flex; justify-content: space-between; width: 90%; font-size: 16px; color: #444; margin-top: 30px; border-top: 1px dashed #d4af37; padding-top: 20px;">
+                    <div><strong>Дата:</strong> 11.07.2026</div>
+                    <div><strong>Организатор конкурса</strong> ___________</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+
+     
